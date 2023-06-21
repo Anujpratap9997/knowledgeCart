@@ -1,0 +1,25 @@
+.cont{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    display:block;
+    height:50%
+}
+
+.acc-scroll{
+    display: block;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.a1{
+    float:right;
+    width:50%;
+    height:100%
+}
+
+.a2{
+    float:left;
+    width:50%;
+    height:100%
+}

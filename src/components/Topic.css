@@ -1,0 +1,8 @@
+.btn1{
+    margin-bottom: 10px;
+    padding: 15px;
+    width:100%;
+}
+.btn1:hover {
+    background-color: rgb(127, 234, 255);
+}

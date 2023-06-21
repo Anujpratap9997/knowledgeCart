@@ -1,0 +1,31 @@
+.Topics {
+    margin: 10px;
+    width:100%
+}
+
+.Board {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border: 2px solid black;
+    position:relative;
+}
+
+.contain{
+    width:90%
+
+}
+
+.board-footer {
+    position: relative;
+    bottom: 10px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+  }
+  
+  .save-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
