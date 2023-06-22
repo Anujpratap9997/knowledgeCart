@@ -171,18 +171,23 @@ const Acc = () => {
 
 
   return (
+    <>
+        <div className='Container'>
+    
+    </div>
     <Card className="cont">
       <Card.Header>
-        {/* <label> Selct your Subjects:  </label>
-        <select name="subject" id="subject">
+      <label> <h2>Select Subject:</h2></label>
+        <select className="form-select" aria-label="Select subject">
           {subjectList.map((subject) => (
             <option key={subject.id} value={subject.id}>
-              {subject.sub}
+              <h2>{subject.sub}</h2>
             </option>
           ))}
-        </select> */}
-        <h3> Subject 1</h3>
-        
+        </select>
+
+        {/* <h3> Subject 1</h3> */}
+
       </Card.Header>
       <Card className="a2">
         <div>
@@ -252,6 +257,8 @@ const Acc = () => {
       </div> */}
       </Card>
     </Card>
+
+    </>
   );
 }
 
