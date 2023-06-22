@@ -207,11 +207,13 @@ import React from "react";
 import Board from "./Board";
 import ListTopic from "./ListTopic";
 import "./DnD.css";
+import { ListGroup } from "react-bootstrap";
+import {Button} from "react-bootstrap";
 
 const TopicList = [
   {
     id: 1,
-    top: "Topic 1"
+    top: "Entreprenuership and it's Developement"
   },
   {
     id: 2,
@@ -238,12 +240,31 @@ const TopicList = [
 const App = () => {
   return (
     <div className="contain">
-      <div className="Topics">
+      {/* <div className="Topics">
         {TopicList.map((topic) => {
           return <ListTopic key={topic.id} top={topic.top} id={topic.id} />;
         })}
+      </div> */}
+
+
+
+{/* This is for ListGroup */}
+<div className="Topics">
+        <ListGroup className="list-group-flush">
+          {TopicList.map((topic) => {
+            return (
+              <ListGroup.Item className="my-1 Box shadow-sm rounded bg-light" key={topic.id}>
+                 <Button variant="outline-primary"><ListTopic top={topic.top} id={topic.id} /></Button>
+                
+              </ListGroup.Item>
+            );
+          })}
+        </ListGroup>
       </div>
-      <Board topicList={TopicList} />
+
+
+
+      {/* <Board topicList={TopicList} /> */}
     </div>
   );
 };

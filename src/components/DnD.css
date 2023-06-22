@@ -9,6 +9,7 @@
     margin: auto;
     border: 2px solid black;
     position:relative;
+    overflow-y: scroll;
 }
 
 .contain{
@@ -24,7 +25,7 @@
   }
   
   .save-button {
-    position: absolute;
+    position: relative;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);

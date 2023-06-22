@@ -104,14 +104,16 @@ import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import DragAndDrop from './DragAndDrop';
 import Card from 'react-bootstrap/Card';
+import { Button } from 'react-bootstrap';
 import Board from './Board';
 import "./DnD.css"
 import "./Acc.css"
+import { useDrop } from "react-dnd";
 
 const TopicList = [
   {
     id: 1,
-    top: "Topic 1"
+    top: "Entreprenuership and it's Developement"
   },
   {
     id: 2,
@@ -134,19 +136,54 @@ const TopicList = [
     top: "Topic 6"
   }
 ];
+const subjectList = [
+  {
+    id: 1,
+    sub: "subject 1"
+  },
+  {
+    id: 2,
+    sub: "subject 2"
+  },
+  {
+    id: 3,
+    sub: "subject 3"
+  },
+  {
+    id: 4,
+    sub: "subject 4"
+  },
+  {
+    id: 5,
+    sub: "subject 5"
+  },
+];
 
-function Acc() {
+const Acc = () => {
   const [savedTopics, setSavedTopics] = useState([]);
 
   const handleSaveTopics = (topics) => {
     setSavedTopics(topics);
     console.log("Saved Topics:", topics);
-    alert("Selected Topics: " + topics.map((topic) => topic.top).join(", "));
+    alert("You have selected these topics: " + topics.map((topic) => topic.top).join(", "));
   };
+
+
 
   return (
     <Card className="cont">
-      <Card.Header>Subject 1</Card.Header>
+      <Card.Header>
+        {/* <label> Selct your Subjects:  </label>
+        <select name="subject" id="subject">
+          {subjectList.map((subject) => (
+            <option key={subject.id} value={subject.id}>
+              {subject.sub}
+            </option>
+          ))}
+        </select> */}
+        <h3> Subject 1</h3>
+        
+      </Card.Header>
       <Card className="a2">
         <div>
           <Accordion defaultActiveKey="0">
@@ -162,11 +199,57 @@ function Acc() {
                 <DragAndDrop />
               </Accordion.Body>
             </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Chapter 3</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>Chapter 4</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="5">
+              <Accordion.Header>Chapter 5</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="6">
+              <Accordion.Header>Chapter 6</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="7">
+              <Accordion.Header>Chapter 7</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="8">
+              <Accordion.Header>Chapter 8</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="9">
+              <Accordion.Header>Chapter 9</Accordion.Header>
+              <Accordion.Body className="acc-scroll">
+                <DragAndDrop />
+              </Accordion.Body>
+            </Accordion.Item>
           </Accordion>
         </div>
       </Card>
       <Card className="a1">
+        <Card.Header><h4>Knowledge Cart</h4></Card.Header>
         <Board topicList={TopicList} onSave={handleSaveTopics} />
+        {/* <div className="save-button">
+        <Button variant="primary">Add to cart</Button>
+      </div> */}
       </Card>
     </Card>
   );
