@@ -11,11 +11,8 @@ function Topic({ id, top }) {
     }),
   }));
   return (
-    <button className="btn1"
-      ref={drag}
-      width="150px"
-      style={{ border: isDragging ? "5px solid #99D9EA" : "0px" }}
-    >{top}</button>
+    // <button ref={drag} >{top}</button>
+    <span ref={drag} >{top}</span>
   );
 }
 

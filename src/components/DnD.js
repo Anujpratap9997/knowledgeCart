@@ -204,8 +204,9 @@
 
 
 import React from "react";
-import Board from "./Board";
+// import Board from "./Board";
 import ListTopic from "./ListTopic";
+import Topic from './Topic';
 import "./DnD.css";
 import { ListGroup } from "react-bootstrap";
 import {Button} from "react-bootstrap";
@@ -255,14 +256,12 @@ const App = () => {
             return (
               <ListGroup.Item className="my-1 Box shadow-sm rounded bg-light" key={topic.id}>
                  <Button variant="outline-primary"><ListTopic top={topic.top} id={topic.id} /></Button>
-                
+                 {/* <Button variant="outline-primary"><Topic key={topic.id} top={topic.top} id={topic.id} /></Button> */}
               </ListGroup.Item>
             );
           })}
         </ListGroup>
       </div>
-
-
 
       {/* <Board topicList={TopicList} /> */}
     </div>
